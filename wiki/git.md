@@ -31,6 +31,9 @@ Der HEAD zeigt auf den aktuellen Repository Zustand. Der HEAD kann auf einen äl
 ## git diff
 Mit diesen Befehl können Änderungen an Dateien dargestellt werden.
 
+## .gitignore
+Ist eine Datei im Repository die definiert, welche Dateien von Git ignoriert werden soll.
+
 # Nutzung von VS-Code in Verbindung mit einem Repository
 Mit Visual Studio Code kann ein Ordner geöffnet werden, der ein Repository abbildet. VS-Code erkennt den Ordner als Repository.
 
