@@ -8,6 +8,12 @@ Mit diesem Befehl kann festgestellt werden, ob ein Verzeichnis ein Repository is
 ## git init
 Mit diesem Befehl wird ein Ordner zu einem Repository gewandelt.
 
+## git config --global user.name "Name"
+Den Namen des Git Users setzen. Diese Daten sind notwendig um überhaupt mit dem Repository zu arbeiten.
+
+## git config --global user.email "Mailadresse"
+Die Mailadresse des Git Users setzen. Diese Daten sind notwendig um überhaupt mit dem Repository zu arbeiten.
+
 ## git status
 Mit diesem Befehl kann der Status des Repository ermittelt werden.
 Folgende Informationen werden angezeigt:
