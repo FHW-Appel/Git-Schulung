@@ -46,6 +46,15 @@ Mit diesem Befehl kann auf einen bestimmten Stand zurückgegangen werden. Die Ä
 ## git reset --hard HEAD~1
 Mit diesem Befehl kann auf einen bestimmten Stand zurückgegangen werden. Statt einem Delta zum HEAD kann eine bestimmte ID gewählt werden.
 
+## git branch
+Mit diesem Befehl können die vorhandenen Branches angezeigt werden.
+
+## git branch branchname
+Erstellt einen neuen branch mit den Namen branchname.
+
+## git checkout branchname
+Wechsle in den branch mit dem Namen branchname.
+
 # Nutzung von VS-Code in Verbindung mit einem Repository
 Mit Visual Studio Code kann ein Ordner geöffnet werden, der ein Repository abbildet. VS-Code erkennt den Ordner als Repository.
 
