@@ -29,7 +29,8 @@ Mit diesen Befehl kann eine Datei dem Repository hinzugefügt werden. Ab diesen 
 Mit diesem Befehl können Änderungen an Dateien ins Repository übernommen werden.
 
 ## git log
-Mit diesem Befehl können sich die letzten Commits angezeigt werden.
+Mit diesem Befehl können sich die letzten Commits angezeigt werden. Mit ```git log --oneline```
+können die letzten Commits in verkürzter Form dargestellt werden.
 
 ## HEAD
 Der HEAD zeigt auf den aktuellen Repository Zustand. Der HEAD kann auf einen älteren Zustand umgebogen werden. Vor diesen Zustand kann anschließend weiter gearbeitet werden. 
@@ -54,6 +55,12 @@ Erstellt einen neuen branch mit den Namen branchname.
 
 ## git checkout branchname
 Wechsle in den branch mit dem Namen branchname.
+
+## git merge branchname
+Merged einen Branche mit den Namen branchname in den aktuellen Brunch. Es muss immer zuerst mit checkout in den Brunch gewechselt werden, in den der Merge hineingebracht werden soll. 
+
+## git branch -d branchname
+Löscht den Branch mit dem Namen branchname.
 
 # Nutzung von VS-Code in Verbindung mit einem Repository
 Mit Visual Studio Code kann ein Ordner geöffnet werden, der ein Repository abbildet. VS-Code erkennt den Ordner als Repository.
