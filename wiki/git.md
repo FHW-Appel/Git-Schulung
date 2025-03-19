@@ -40,6 +40,12 @@ Mit diesen Befehl können Änderungen an Dateien dargestellt werden.
 ## .gitignore
 Ist eine Datei im Repository die definiert, welche Dateien von Git ignoriert werden soll.
 
+## git reset --soft HEAD~1
+Mit diesem Befehl kann auf einen bestimmten Stand zurückgegangen werden. Die Änderungen bleiben bestehend, nur die Commits werden zurückgenommen. Statt einem Delta zum HEAD kann eine bestimmte ID gewählt werden.
+
+## git reset --hard HEAD~1
+Mit diesem Befehl kann auf einen bestimmten Stand zurückgegangen werden. Statt einem Delta zum HEAD kann eine bestimmte ID gewählt werden.
+
 # Nutzung von VS-Code in Verbindung mit einem Repository
 Mit Visual Studio Code kann ein Ordner geöffnet werden, der ein Repository abbildet. VS-Code erkennt den Ordner als Repository.
 
@@ -56,7 +62,7 @@ Im Reiter Source Control können Commits über die GUI getätigt werden. Hierzu 
 
 Über das Plus-Zeichen kann entschieden werden, welche geänderten Dateien mit dem Commit übernommen werden sollen.
 
-In Message kann eine Commitmessage eingegeben werden.
+In Message kann eine Commit-Message eingegeben werden.
 
 Mit der Schaltfläche Commit wird der Commit ausgeführt.
 
