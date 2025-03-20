@@ -1,0 +1,26 @@
+name: Run Python Tests
+
+on: 
+  push:  # Tests werden bei jedem Push ausgeführt
+  pull_request:  # Tests werden auch bei jedem Pull Request ausgeführt
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Die Tests laufen in einer Ubuntu-Umgebung
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Installiere Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # Die gewünschte Python-Version
+
+      - name: Abhängigkeiten installieren
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Führe den Test Runner aus
+        run: python test_runner.py
