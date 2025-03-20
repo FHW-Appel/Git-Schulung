@@ -5,12 +5,15 @@ import unittest
 
 # Pfad zum Hauptverzeichnis hinzufügen
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-# Oder zum src-Verzeichnis, falls dort die Module liegen
 sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(__file__)), 'src'))
 
-# Tests laden und ausführen
-test_loader = unittest.TestLoader()
-test_suite = test_loader.discover('tests', pattern='test*.py')
-# Oder direkt die Datei laden: unittest.TestLoader().loadTestsFromName('test_InputReader')
+# Bestimme den absoluten Pfad zu 'tests/'
+tests_dir = os.path.join(os.path.dirname(__file__), "tests")
 
-unittest.TextTestRunner().run(test_suite)
+# Test-Suite mit absolutem Pfad laden
+test_loader = unittest.TestLoader()
+test_suite = test_loader.discover(start_dir=tests_dir, pattern="test*.py")
+
+# Test-Runner mit verboseren Logs ausführen
+runner = unittest.TextTestRunner(verbosity=2)
+runner.run(test_suite)
