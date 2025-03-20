@@ -1,6 +1,5 @@
 import os
 
-ctr = 0
 
 def waehlen(sortennummer, sortenliste):
     '''Gibt die gewählte Sorte aus.'''
@@ -11,7 +10,7 @@ def waehlen(sortennummer, sortenliste):
 
 def auflistung(sortenliste):
     '''Gibt die Sortenliste aus.'''
-    global ctr
+    ctr = 0
     print('Wähle eine Sorte aus der Liste:')
     for s in sortenliste:
         ctr += 1
@@ -35,6 +34,7 @@ def main():
     try:
         auswahl = int(input("Bitte geben Sie die Nummer der gewünschten Sorte ein: "))
         waehlen(auswahl, sortenliste)
+        return {sortenliste[auswahl - 1]}
     except ValueError:
         print("Bitte geben Sie eine gültige Zahl ein.")
 
