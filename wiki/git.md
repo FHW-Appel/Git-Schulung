@@ -62,6 +62,18 @@ Merged einen Branche mit den Namen branchname in den aktuellen Brunch. Es muss i
 ## git branch -d branchname
 Löscht den Branch mit dem Namen branchname.
 
+## git clone
+Ein remote Repository auf den lokalen Rechner kopieren. 
+
+## git fetch
+Den Zustand des remote Repository mit der lokalen Kopie abgleichen.  
+
+## git pull
+Den Zustand vom remote Repository in mein lokales Repository einpflegen. Wenn Konflikte mit den lokalen Zustand auftreten, dann wird das einpflegen eventuell abgebrochen. 
+
+## git push
+Den lokalen Zustand des Repository in den remote Zustand einpflegen. Wenn Konflikte mit den remote Zustand auftreten, dann wird das einpflegen eventuell abgebrochen.
+
 # Nutzung von VS-Code in Verbindung mit einem Repository
 Mit Visual Studio Code kann ein Ordner geöffnet werden, der ein Repository abbildet. VS-Code erkennt den Ordner als Repository.
 
