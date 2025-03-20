@@ -15,6 +15,14 @@ class TrinkDatenIF:
     def dataframe_ausgeben(self):
         '''Gibt den aktuellen DataFrame in der Konsole aus.'''
         print(self.trinkdaten)
+    
+    def dataframe_exportieren(self, dateipfad):
+        '''Exportiert den DataFrame in eine externe Datei (z. B. CSV).'''
+        try:
+            self.trinkdaten.to_csv(dateipfad, index=False, encoding='utf-8')
+            print(f"DataFrame erfolgreich nach '{dateipfad}' exportiert.")
+        except Exception as e:
+            print(f"Fehler beim Exportieren des DataFrames: {e}")
 
 # Beispiel für die Verwendung der Klasse
 if __name__ == "__main__":
@@ -27,3 +35,6 @@ if __name__ == "__main__":
     
     # DataFrame ausgeben
     trinkdaten.dataframe_ausgeben()
+
+    # DataFrame exportieren
+    trinkdaten.dataframe_exportieren("trinkdaten.csv")
