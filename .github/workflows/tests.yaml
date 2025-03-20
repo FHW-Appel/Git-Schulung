@@ -1,12 +1,12 @@
 name: Run Python Tests
 
 on: 
-  push:  # Tests werden bei jedem Push ausgeführt
-  pull_request:  # Tests werden auch bei jedem Pull Request ausgeführt
+  push:  
+  pull_request:  
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Die Tests laufen in einer Ubuntu-Umgebung
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Repository auschecken
@@ -15,12 +15,18 @@ jobs:
       - name: Installiere Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'  # Die gewünschte Python-Version
+          python-version: '3.11'  
 
       - name: Abhängigkeiten installieren
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Setze Arbeitsverzeichnis
+        run: cd playground/sampleproject && pwd
+        
+      - name: Debug - Zeige den Verzeichnisinhalt
+        run: ls -R
+        
       - name: Führe den Test Runner aus
-        run: python test_runner.py
+        run: python playground/sampleproject/testrunner.py
