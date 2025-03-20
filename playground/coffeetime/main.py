@@ -19,7 +19,9 @@ while True:
     print("\nWas möchten Sie tun?")
     print("1: Neue Eingabe hinzufügen")
     print("2: Daten anzeigen")
-    print("3: Programm beenden")
+    print("3: Daten speichern")
+    print("4: Daten laden")
+    print("5: Programm beenden")
     
     auswahl = input("Bitte wählen Sie eine Option (1/2/3): ")
     
@@ -38,6 +40,14 @@ while True:
         print("\nAktuelle Trinkdaten:")
         trinkdaten.dataframe_ausgeben()
     elif auswahl == "3":
+        # Daten speichern
+        clear_console()
+        trinkdaten.dataframe_exportieren("trinkdaten.csv")
+    elif auswahl == "4":
+        # Daten laden
+        clear_console()
+        trinkdaten.dataframe_einlesen("trinkdaten.csv")
+    elif auswahl == "5":
         # Programm beenden
         clear_console()
         print("Programm wird beendet. Auf Wiedersehen!")
