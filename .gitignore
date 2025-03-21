@@ -1,0 +1,4 @@
+__pycache__/
+
+# Ignoriere die Datei trinkdaten.csv
+trinkdaten.csv
