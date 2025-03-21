@@ -1,0 +1,43 @@
+# Bytecode-Dateien
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtuelle Umgebungen
+venv/
+env/
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / Build-Verzeichnisse
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# IDE / Editor-spezifische Dateien
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp
+
+# Test- und Debugging-Dateien
+.coverage
+.tox/
+.nox/
+htmlcov/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Logs und temporäre Dateien
+logs/
+*.log
+*.tmp
+.DS_Store
+
+# GitHub Actions und CI/CD
+.github/
+*.lock
