@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import kaffeebohne_waehlen 
-import datenIF
+import playground.coffeetime.src.kaffeebohne_waehlen as kaffeebohne_waehlen 
+import playground.coffeetime.src.datenIF as datenIF
 from datetime import datetime  # Import für die aktuelle Uhrzeit
 import os
 
