@@ -5,7 +5,7 @@ import lottery
 import output_handler
 
 def main():
-    print("🎰 Willkommen bei der Lottoziehung! 🎰")
+    pront("🎰 Willkommen bei der Lottoziehung! 🎰")
     
     reader = input_reader.InputReader()  # Standardmäßig von der Konsole lesen
     writer = output_writer.OutputWriter()
