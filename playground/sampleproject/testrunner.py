@@ -16,7 +16,7 @@ test_suite = test_loader.discover(start_dir=tests_dir, pattern="test*.py")
 
 # Test-Runner mit verboseren Logs ausführen
 runner = unittest.TextTestRunner(verbosity=2)
-runner.run(test_suite)
+result = runner.run(test_suite)
 
 # Exit mit Code 0 bei Erfolg, 1 bei Fehlern
 sys.exit(not result.wasSuccessful())
