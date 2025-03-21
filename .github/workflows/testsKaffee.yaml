@@ -28,4 +28,4 @@ jobs:
           pip list
 
       - name: Führe den Test Runner aus
-        run: python playground/coffeetime/testrunner.py && echo $?
+        run: python testrunner.py && echo $?
