@@ -1,6 +1,11 @@
 import unittest
-from unittest.mock import patch, mock_open
-import __init__
+from unittest.mock import patch, mock_open, call
+import sys
+import os
+
+# Fügen Sie den Pfad zum Modul hinzu
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
 import kaffeebohne_waehlen
 
 class TestKaffeebohneWaehlen(unittest.TestCase):
@@ -23,9 +28,9 @@ class TestKaffeebohneWaehlen(unittest.TestCase):
         kaffeebohne_waehlen.auflistung(self.sortenliste)
         expected_calls = [
             call('Wähle eine Sorte aus der Liste:'),
-            call("\t \t \t \t 1 \tArabica"),
-            call("\t \t \t \t 2 \tCanephora"),
-            call("\t \t \t \t 3 \tLiberica")
+            call("\t \t \t \t", '1', "\tArabica"),
+            call("\t \t \t \t", '2', "\tCanephora"),
+            call("\t \t \t \t", '3', "\tLiberica")
         ]
         mock_print.assert_has_calls(expected_calls, any_order=False)
 
@@ -36,7 +41,7 @@ class TestKaffeebohneWaehlen(unittest.TestCase):
         with patch('os.path.join', return_value='kaffeebohnen.txt'):
             result = kaffeebohne_waehlen.main()
             mock_print.assert_any_call("Sie haben Arabica gewählt.")
-            self.assertIsNone(result)
+            self.assertEqual(result, {"Arabica"})
 
     @patch('builtins.input', return_value='invalid')
     @patch('builtins.print')
