@@ -22,6 +22,5 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-     
       - name: Führe den Test Runner aus
         run: python playground/sampleproject/testrunner.py && echo $?
